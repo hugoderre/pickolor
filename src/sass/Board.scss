@@ -1,0 +1,16 @@
+@use 'sass:math';
+
+#board_main-container {
+    height: 100vh;
+    background-color: #74b9ff;
+    &::before {
+        content: '';
+        display:block;
+        position: absolute;
+        left: math.round(math.random() * 90) + unquote('%');
+        top: math.round(math.random() * 80) + unquote('%');
+        background-color: red;
+        width: 100px;
+        height: 100px;
+    }
+}
